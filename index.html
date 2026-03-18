@@ -20,7 +20,7 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h1>Automaten und<br>Chomsky-Hierarchie</h1>
+					<h1>Automaten</h1>
 				</section>
 				<section>
 					<ul>
@@ -48,7 +48,7 @@
 					<section>
 						<h2>Arten von Automaten</h2>
 						<ul>
-							<li>Nichtdeterministisch</li>
+							<li>Nichtdeterministisch oder Deterministisch</li>
 							<li class="fragment fade-up"><a href="https://homepages.thm.de/~hg51/Veranstaltungen/VS-13/Folien/vs-03.pdf">Transitionssysteme</a></li>
 							<li class="fragment fade-up">Akzeptoren</li>
 							<li class="fragment fade-up">Transduktoren</li>
@@ -57,7 +57,7 @@
 				</section>
 				<section>
 					<section>
-						<h2>Endlicher Automat (DEA)</h2>
+						<h2>Deterministischer Endlicher Automat (DEA)</h2>
 						<ul>
 							<li class="fragment fade-up">Zustände (endliche Menge an Zuständen) Q</li>
 							<li class="fragment fade-up">Eingabealphabet; Σ = { a, b }</li>
@@ -82,8 +82,75 @@
 					</section>
 				</section>
 				<section>
-					<h1>Chomsky Hierarchie</h1>
+					<section>
+						<h1>Chomsky Hierarchie</h1>
 					<img src="./assets/chomsky.png" alt="Teilmengenbeziehung der Chomsky-Hierarchie">
+					</section>
+					<section>
+						<h2>Chomsky-Schützenberger-Hierarchie</h2>
+						<ul>
+							<li><a href="https://de.wikipedia.org/wiki/Noam_Chomsky">Noam Chomsky</a> (Amerikanischer Sprachwissenschaftler)</li>
+							<li><a href="https://de.wikipedia.org/wiki/Marcel_Sch%C3%BCtzenberger">Marcel Schützenberger</a> (Französischer Mathematiker)</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<ul>
+						<li>Klassifizierung von "Grammatiken"</li>
+						<li class="fragment fade-up"><a href="https://hpi.de/friedrich/teaching/units/grammatiken.html">Grammatiken</a> -> Regeln um Sprachen zu Erzeugen</li>
+						<li class="fragment fade-up">Klassifiziert damit auch Sprachen</li>
+						<li class="fragment fade-up">Typ 0-3</li>
+						<li class="fragment fade-up">Typ 0 ist allgemeiner -> Jede Typ 3 Sprache ist auch Typ 0, 1 und 2 usw.</li>
+						<li class="fragment fade-up">Einordnung von "Mächtigkeit" von Automaten oder Grammatiken</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h2>Typ 0 - Unbeschränkte Grammatiken</h2>
+						Beliebige Grammatik
+					</section>
+					<section>
+						<h3>Semi-entscheidbare Sprachen</h3>
+						Es gibt eine Turingmaschine, die Wörter der Sprache akzeptiert<br>
+						z. B. Halteproblem<br>
+						Auch "Rekursiv Aufzählbare Sprachen"<br>
+						-> "Es gibt einen Algorithmus, der die Sprache als Ergebnissmenge hat"
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Typ 1 - Kontextsensitiven Grammatiken</h2>
+						Wird von nichtdeterministischen Linear beschränkten Automaten akzeptiert<br>
+						Turingmaschine, deren Band nur so groß wie die Eingabe ist<br>
+						Unklar ob auch deterministisch
+					</section>
+					<section>{a<sup>n</sup>b<sup>n</sup>c<sup>n</sup> | n >= 0}</section>
+				</section>
+				<section>
+					<section>
+						<h2>Typ 2 - Kontextfreie Grammatiken</h2>
+						Nichtdeterministischer Kellerautomat<br>
+						Deterministischer Kellerautomat reicht nicht
+					</section>
+					<section>
+						<h3>Kellerautomat</h3>
+						<img src="./assets/kellerautomat.png" alt="Aufbau eines Kellerautomats" width="427" height="306">
+						<ul>
+							<li>Hat einen Stack (Keller) als "Zwischenspeicher"</li>
+							<li>Keine Turingmaschine - Kopf bewegt sich nicht nach links und schreibt nicht</li>
+							<li>Kopf darf auch ε einlesen</li>
+						</ul>
+					</section>
+					<section>
+						{a<sup>n</sup>b<sup>n</sup> | n >= 0}<br>
+						{vv<sup>R</sup> | v ∈ Σ* }
+					</section>
+				</section>
+				<section>
+					<h2>Typ 3 - Reguläre Grammatiken</h2>
+					Endliche Automaten<br>
+					Egal ob deterministisch oder nichtdeterministisch<br>
+					Reguläre Ausdrücke (eingeschränkte Variante des bekannten regex)
 				</section>
 				<section>
 					<h2>Quellen</h2>
@@ -93,6 +160,7 @@
 						<li><a href="https://homepages.thm.de/~hg51/Veranstaltungen/VS-13/Folien/vs-03.pdf">https://homepages.thm.de/~hg51/Veranstaltungen/VS-13/Folien/vs-03.pdf</a></li>
 						<li><a href="https://hpi.de/friedrich/teaching/units/endliche-automaten.html">https://hpi.de/friedrich/teaching/units/endliche-automaten.html</a></li>
 						<li><a href="https://formal.kastel.kit.edu/teaching/FormSysWS0910/22EndlicheAutomaten.pdf">https://formal.kastel.kit.edu/teaching/FormSysWS0910/22EndlicheAutomaten.pdf</a></li>
+						<li><a href="https://www2.informatik.hu-berlin.de/logik/lehre/fm-lehre/ss12/th-inf-2/Kapitel-ChomskyHierarchie-Handout.pdf">https://www2.informatik.hu-berlin.de/logik/lehre/fm-lehre/ss12/th-inf-2/Kapitel-ChomskyHierarchie-Handout.pdf</a></li>
 					</ul>
 				</section>
 			</div>
