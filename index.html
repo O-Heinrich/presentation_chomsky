@@ -40,15 +40,60 @@
 				<section>
 					<section>
 						<h2>Was ist ein Automat?</h2>
-					</section>
-					<section>
 						<ul>
 							<li>Befindet sich immer in genau einem Zustand</li>
 							<li>Liest Zeichen ein und ändert Zustand</li>
-							<li class="fragment fade-up">Deterministisch oder Nichtdeterministisch</li>
-							<li class="fragment fade-up"><a href="https://www2.informatik.uni-hamburg.de/TGI/lehre/vl/WS1011/FGI2/sec/FGI2_kap1_2(kripke)folien_weiss.pdf">Transitionssysteme</a>, Akzeptoren und Transduktoren</li>
 						</ul>
 					</section>
+					<section>
+						<h2>Arten von Automaten</h2>
+						<ul>
+							<li>Nichtdeterministisch</li>
+							<li class="fragment fade-up"><a href="https://homepages.thm.de/~hg51/Veranstaltungen/VS-13/Folien/vs-03.pdf">Transitionssysteme</a></li>
+							<li class="fragment fade-up">Akzeptoren</li>
+							<li class="fragment fade-up">Transduktoren</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Endlicher Automat (DEA)</h2>
+						<ul>
+							<li class="fragment fade-up">Zustände (endliche Menge an Zuständen) Q</li>
+							<li class="fragment fade-up">Eingabealphabet; Σ = { a, b }</li>
+							<li class="fragment fade-up">Übergangsfunktion</li>
+							<li class="fragment fade-up">Startzustand (Element von Q)</li>
+							<li class="fragment fade-up">Nichtleere Teilmenge von Q der akzeptierenden Endzustände</li>
+						</ul>
+					</section>
+					<section>
+						<h2><a href="https://flaci.com/autoedit">Darstellung als Graph</a></h2>
+						<img src="./assets/simple_dea.png" alt="Einfaches Beispiel für den Graphen eines DEA">
+					</section>
+				</section>
+				<section>
+					<section>
+						L<sub>1</sub> = Menge aller Wörter mit keinen 2 a nebeneinander<br>
+						<img src="./assets/noDoubleA_dea.png" alt="Beispiel für einen DEA">
+					</section>
+					<section>
+						L<sub>5</sub> = Menge aller Wörter mit mehr a als b<br>
+						<h1>?</h1>
+					</section>
+				</section>
+				<section>
+					<h1>Chomsky Hierarchie</h1>
+					<img src="./assets/chomsky.png" alt="Teilmengenbeziehung der Chomsky-Hierarchie">
+				</section>
+				<section>
+					<h2>Quellen</h2>
+					<ul>
+						<li><a href="https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/ti_7_4_ger_web.html#1">https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/ti_7_4_ger_web.html#1</a></li>
+						<li><a href="https://info-wsf.de/akzeptor/">https://info-wsf.de/akzeptor/</a></li>
+						<li><a href="https://homepages.thm.de/~hg51/Veranstaltungen/VS-13/Folien/vs-03.pdf">https://homepages.thm.de/~hg51/Veranstaltungen/VS-13/Folien/vs-03.pdf</a></li>
+						<li><a href="https://hpi.de/friedrich/teaching/units/endliche-automaten.html">https://hpi.de/friedrich/teaching/units/endliche-automaten.html</a></li>
+						<li><a href="https://formal.kastel.kit.edu/teaching/FormSysWS0910/22EndlicheAutomaten.pdf">https://formal.kastel.kit.edu/teaching/FormSysWS0910/22EndlicheAutomaten.pdf</a></li>
+					</ul>
 				</section>
 			</div>
 		</div>
