@@ -30,3 +30,7 @@ Ein DEA ist ein Akzeptor und hat folgende formale Bestandteile:
 
 Die Übergangsfunktion bestimmt für jede Kombination aus Zustand und eingelesenem Zeichen aus dem Alphabet den Folgezustand.  
 Eine Turingmaschine kann (wenn sie akzeptierende Endzustände hat) auch als spezielle Form eines DEA angesehen werden.
+
+## Chomsky-Hierarchie
+
+Die Chomsky-Hierarchie, manchmal auch Chomsky-Schützenberger-Hierarchie, benannt nach dem amerikanischen Linguisiten Noam Chomsky und dem französischem Mathematiker Marcel Schützenberger, wurde erstmals 1956 von Noam Chomsky beschrieben. Sie dient der Klassifizierung von Grammatiken bzw. formalen Sprachen.
