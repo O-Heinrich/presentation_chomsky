@@ -30,11 +30,21 @@
 					</ul>
 				</section>
 				<section>
+					<h2>Automatentheorie</h2>
+					<ul>
+						<li>Theoretische Informatik</li>
+						<li>Berechenbarkeitstheorie</li>
+						<li>Komplexitätstheorie</li>
+						<li>z. B. Compilerbau, Parser (regex), ...</li>
+						<li>Probleme in der Form von Erkennung formaler Sprachen</li>
+					</ul>
+				</section>
+				<section>
 					<h2><a href="https://o-heinrich.github.io/presentation_turing/#/3">Wiederholung</a></h2>
 					<ul>
 						<li>Alphabet: Menge an Zeichen</li>
 						<li>Wort: Endliche Zeichenfolge aus einem Alphabet</li>
-						<li>Sprache: Menge an Wörtern über ein Alphabet</li>
+						<li>(Formale) Sprache: Menge an Wörtern über ein Alphabet</li>
 					</ul>
 				</section>
 				<section>
@@ -77,7 +87,7 @@
 						<img src="./assets/noDoubleA_dea.png" alt="Beispiel für einen DEA">
 					</section>
 					<section>
-						L<sub>5</sub> = Menge aller Wörter mit mehr a als b<br>
+						L<sub>2</sub> = Menge aller Wörter mit mehr a als b<br>
 						<h1>?</h1>
 					</section>
 				</section>
@@ -111,26 +121,42 @@
 					</section>
 					<section>
 						<h3>Semi-entscheidbare Sprachen</h3>
-						Es gibt eine Turingmaschine, die Wörter der Sprache akzeptiert<br>
-						z. B. Halteproblem<br>
-						Auch "Rekursiv Aufzählbare Sprachen"<br>
-						-> "Es gibt einen Algorithmus, der die Sprache als Ergebnissmenge hat"
+						<ul>
+							<li class="fragment fade-up">Es gibt eine Turingmaschine, die Wörter der Sprache akzeptiert</li>
+							<li class="fragment fade-up">Auch "Rekursiv Aufzählbare Sprachen"</li>
+							<li class="fragment fade-up">-> "Es gibt einen Algorithmus, der die Sprache als Ergebnissmenge hat"</li>
+						</ul>
+					</section>
+					<section>
+						Halteproblem<br>
+						<strong>nicht</strong> Umkehrung des Halteproblems
 					</section>
 				</section>
 				<section>
 					<section>
 						<h2>Typ 1 - Kontextsensitiven Grammatiken</h2>
-						Wird von nichtdeterministischen Linear beschränkten Automaten akzeptiert<br>
-						Turingmaschine, deren Band nur so groß wie die Eingabe ist<br>
-						Unklar ob auch deterministisch
+						<ul>
+							<li class="fragment fade-up">Wird von nichtdeterministischen Linear beschränkten Automaten akzeptiert</li>
+							<li class="fragment fade-up">Turingmaschine, deren Band nur so groß wie die Eingabe ist</li>
+							<li class="fragment fade-up">Unklar ob auch deterministisch</li>
+							<li class="fragment fade-up">Auch "Monotone Grammatiken"</li>
+						</ul>
 					</section>
-					<section>{a<sup>n</sup>b<sup>n</sup>c<sup>n</sup> | n >= 0}</section>
+					<section>
+						{ a<sup>n</sup>b<sup>n</sup>c<sup>n</sup> | n >= 0 }<br>
+						{ w<sup>|w|</sup> | w ∈ Σ* }<br>
+						Primzahlen (in binär)<br>
+						Perl
+					</section>
 				</section>
 				<section>
 					<section>
 						<h2>Typ 2 - Kontextfreie Grammatiken</h2>
-						Nichtdeterministischer Kellerautomat<br>
-						Deterministischer Kellerautomat reicht nicht
+						<ul>
+							<li class="fragment fade-up">Nichtdeterministischer Kellerautomat</li>
+							<li class="fragment fade-up">Deterministischer Kellerautomat reicht nicht</li>
+							<!--<li class="fragment fade-up">Struktur lässt sich durch Syntaxbaum darstellen</li>-->
+						</ul>
 					</section>
 					<section>
 						<h3>Kellerautomat</h3>
@@ -142,17 +168,31 @@
 						</ul>
 					</section>
 					<section>
-						{a<sup>n</sup>b<sup>n</sup> | n >= 0}<br>
-						{vv<sup>R</sup> | v ∈ Σ* }
+						{ a<sup>n</sup>b<sup>n</sup> | n >= 0 }<br>
+						{ vv<sup>R</sup> | v ∈ Σ* }
 					</section>
 				</section>
 				<section>
-					<h2>Typ 3 - Reguläre Grammatiken</h2>
-					Endliche Automaten<br>
-					Egal ob deterministisch oder nichtdeterministisch<br>
-					Reguläre Ausdrücke (eingeschränkte Variante des bekannten regex)
+					<section>
+						<h2>Typ 3 - Reguläre Grammatiken</h2>
+						<ul>
+							<li class="fragment fade-up">Endliche Automaten</li>
+							<li class="fragment fade-up">Egal ob deterministisch oder nichtdeterministisch</li>
+							<li class="fragment fade-up">Reguläre Ausdrücke (eingeschränkte Variante des bekannten <a href="https://cheatography.com/davechild/cheat-sheets/regular-expressions/">regex</a>)</li>
+							<li class="fragment fade-up">Endlich große Sprachen</li>
+							<li class="fragment fade-up">"Endliches Gedächtnis"</li>
+						</ul>
+					</section>
 				</section>
 				<section>
+					<section>
+						<a href="https://kornai.com/Papers/nlch.pdf">Natürliche Sprachen?</a>
+					</section>
+					<section>
+						<a href="https://stackoverflow.com/questions/2929507/chomsky-hierarchy-and-programming-languages">Programmiersprachen</a>
+					</section>
+				</section>
+				<section data-visibility="hidden">
 					<h2>Quellen</h2>
 					<ul>
 						<li><a href="https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/ti_7_4_ger_web.html#1">https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/ti_7_4_ger_web.html#1</a></li>
@@ -161,6 +201,7 @@
 						<li><a href="https://hpi.de/friedrich/teaching/units/endliche-automaten.html">https://hpi.de/friedrich/teaching/units/endliche-automaten.html</a></li>
 						<li><a href="https://formal.kastel.kit.edu/teaching/FormSysWS0910/22EndlicheAutomaten.pdf">https://formal.kastel.kit.edu/teaching/FormSysWS0910/22EndlicheAutomaten.pdf</a></li>
 						<li><a href="https://www2.informatik.hu-berlin.de/logik/lehre/fm-lehre/ss12/th-inf-2/Kapitel-ChomskyHierarchie-Handout.pdf">https://www2.informatik.hu-berlin.de/logik/lehre/fm-lehre/ss12/th-inf-2/Kapitel-ChomskyHierarchie-Handout.pdf</a></li>
+						<!--https://de.wikipedia.org/wiki/Pumping-Lemma-->
 					</ul>
 				</section>
 			</div>
