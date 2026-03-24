@@ -61,6 +61,8 @@ Beispiele:
 
 #### Kellerautomaten
 
+![Kellerautomat](./assets/kellerautomat.png)
+
 Ein Kellerautomat sieht einer Turingmaschine in der Darstelung ähnlich, hat aber eigentlich im Vergleich zu endlichen Automaten nur zwei Erweiterungen:
 
 - Ein Kellerautomat hat einen Zwischenspeicher, Stack oder Keller genannt, in welchen der Automat ein Zeichen schreiben kann, und beim nächsten Symbol des Wortes dieses wieder ausliest
@@ -76,6 +78,8 @@ Beispiele:
 - { wa | w ∈ Σ* } - Alle Wörter, welche auf a enden
 
 ### Überblick
+
+![Chomsky-Hierarchie](./assets/chomsky.png)
 
 | Typ | Grammatik | Automaten | sonstige |
 | - | - | - | - |
