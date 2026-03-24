@@ -47,6 +47,7 @@ Die kontextsensitiven, auch monotone Grammatiken genannt, erzeugen genau die Spr
 Beispiele:
 
 - { a<sup>n</sup>b<sup>n</sup>c<sup>n</sup> | n >= 0 } - Wörter welche mit einer Reihe von a's beginnen, gefolgt von einer Reihe von b's und endend mit einer Reihe von c's und die anzahl ist jeweils dieselbe (also { abc, aabbcc, aaabbbccc... })
+- { ww | w ∈ Σ* } - Copy-Sprache, Wörter die sich aus einem Wort zweimal hintereinander geschrieben zusammenstellen
 - Primzahlen in der Binärdarstellung
 - Die Programmiersprache Perl wurde absichtlich kontextsensitiv erstellt
 
@@ -73,3 +74,22 @@ Beispiele:
 - Alle endlich großen/aufzählbaren Sprachen
 - { (ab)<sup>n</sup> | n >= 0 } - Alle Wörter, die einfach nur ab beliebig oft wiederholen
 - { wa | w ∈ Σ* } - Alle Wörter, welche auf a enden
+
+### Überblick
+
+| Typ | Grammatik | Automaten | sonstige |
+| - | - | - | - |
+| Typ 0 | Unbeschränkte Grammatik | Turingmaschine | |
+| Typ 1 | Kontextsensitive Grammatik | Nichtdeterministischer linear beschränkter Automat | |
+| Typ 2 | Kontextfreie Grammatik | Nichtdeterministischer Kellerautomat | |
+| Typ 3 | Reguläre Grammatik | Endlicher Automat | Reguläre Ausdrücke |
+
+Man könnte hier sagen, dass eine Grammatik und ein Automat, welche in derselben Zeile stehen, dieselben Sprachen erzeugen können bzw. akzeptieren. Dh. z. B. aus jeder regulären Grammatik lässt sich ein endlicher Automat oder ein regulärer Ausdruck bauen, welche dieselbe Sprache akzeptieren und andersrum.
+
+### Natürliche Sprachen
+
+Die Frage, wo sich natürliche (gesprochene) Sprachen auf der Czhomsky Hierarchie einordnen ist umstritten. Man geht hier davon aus, dass ein Wort einem Satz entspricht (wäre ein formales Wort einfach ein gesprochenes Wort, so gäbe es endlich viele Wörter und die Sprachen wären regulär) und somit der grammatikalische (syntaktische) Aufbau beachtet wird. Man ist sich einig, dass die Bedeutung (Semantik) sich nicht wirklich darstellen lässt. Einen wirklich weit anerkannten Beweis, in welchen Typen die natürlichen Sprachen gehören gibt es nicht, es gibt Vertreter für jede der vier Kategorien. Aber manche Sprachen, wie z. B. Deutsch, werden als schwieriger angesehen und in manchen Quellen in eine niedrigere Grammatik (Typ 1 statt Typ 2) als andere Sprachen eingeordnet.
+
+### Programmiersprachen
+
+Die Automatentheorie wird unter anderem auch zur Compilierung von Programmiersprachen verwendet, um die Syntax eines Programms auf Korrektheit zu prüfen. Ein ganzes Programm wird hier als ein formales Wort angesehen, und die formale Sprache sind alle Wörter, die syntaktisch korrekt sind (also compilieren). Man stellt fest, dass die meisten Programmiersprachen fast kontextfrei sind, man jedoch mit dieser Einschränkung nicht Namen von Variablen etc. überprüfen kann, ob diese bereits deklariert wurden. Oft parsed ein Compiler den Code zunächst wie ein Kellerautomat (betrachtet das Programm also als Wort einer kontextfreien Sprache) und führt anschließend noch zusätzliche Überprüfungen durch, die z. B. die Deklaration von Variablen prüft.
